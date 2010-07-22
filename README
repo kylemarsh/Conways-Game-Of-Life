@@ -1,0 +1,20 @@
+Python/TkInter version of Conway's Game of Life
+Will include interesting modifications.
+
+Potential modifications:
+    - Contaigens -- a plagued cell has different survival rules and can pass
+      on its plague to nearby cells.
+    - Cities -- Population centers that are more forgiving of overcrowding
+      than normal locations.
+    - Species -- Different species interact with one another.
+
+Interface:
+    - Game will be played on a finite n x m grid displayed on a canvas
+    - Clicking cells in the canvas will change their state
+        - When different kinds of cells become available clicking a type of
+          cell in a toolbox-type arrangement will change the kind of cell the
+          user will place next
+    - Users will be able to control the speed of the game's 'tick'
+
+etc...
+
