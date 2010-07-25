@@ -5,25 +5,29 @@
 //============================================================================
 
 #include <iostream>
-#include "gol_objects.hpp"
+#include "gol_board.hpp"
+#include "gol_cells.hpp"
 
 using namespace std;
 
 int main() {
 	GameBoard test_board = GameBoard(4, 4);
-	GameBoard::Cell live = GameBoard::Cell(1);
+	Cell live = Cell(1);
 
+	// Blinker Test
+//	test_board.set_cell(0, 0, live);
+//	test_board.set_cell(0, 1, live);
+//	test_board.set_cell(1, 0, live);
+
+	// Block Test
+	test_board.set_cell(0, 0, live);
 	test_board.set_cell(0, 1, live);
-	test_board.set_cell(1, 1, live);
-	test_board.set_cell(2, 1, live);
-	cout << "Initial Condition:\n";
-	test_board.print(cout);
-	cout << "First Generation:\n";
+	test_board.set_cell(1, 0, live);
+	cout << "Initial Condition:\n" << test_board;
 	test_board.tick();
-	test_board.print(cout);
-	cout << "Second Generation:\n";
+	cout << "First Generation:\n" << test_board;
 	test_board.tick();
-	test_board.print(cout);
+	cout << "Second Generation:\n" << test_board;
 
 	return 0;
 }
